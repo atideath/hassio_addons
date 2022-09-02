@@ -24,6 +24,21 @@ for network in $(bashio::config 'mqtt|keys'); do
 done
 
 
+
+
+file="/bar.txt"
+echo "Creating non-empty file called /tmp/foo.txt ..."
+echo "This is a test" > /foo.txt
+echo "Creating another file called ${file} ..."
+echo "Thursday" > "${file}"
+## append ##
+echo "Friday" >> "${file}"
+
+
+
+
+
+
 echo "option MQTT_ENABLE \"${MQTT_ENABLE}\";"
 echo "option MQTT_USERNAME \"${MQTT_USERNAME}\";"
 
