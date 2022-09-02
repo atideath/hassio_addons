@@ -43,9 +43,9 @@ echo "   port:"${HISILICON_PORT} >> "${file}"
 
 
 
-echo "start 8000 web"
+#echo "start 8000 web"
 
-python3 -m http.server 8000 
+#python3 -m http.server 8000 
 
 #echo "start alarmserver"
 /alarmserver-linux-raspberry 
