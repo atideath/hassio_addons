@@ -6,7 +6,7 @@ RUN \
   apk add --no-cache \
     python3
 
-WORKDIR /data
+WORKDIR /data/
 
 
 
