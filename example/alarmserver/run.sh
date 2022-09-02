@@ -17,15 +17,15 @@ for network in $(bashio::config 'mqtt|keys'); do
 done
 
 file="/config.yaml"
-echo "debug:"${DEBUG} > "${file}"
+echo "debug: "${DEBUG} > "${file}"
 ## append ##
 echo "mqtt:" >> "${file}"
-echo "   enabled:"${MQTT_ENABLE} >> "${file}"
-echo "   username:"${MQTT_USERNAME} >> "${file}"
-echo "   password:\"${MQTT_PASSWORD}\"" >> "${file}"
-echo "   port:"${MQTT_PORT} >> "${file}"
-echo "   server:\"${MQTT_SERVER}\"" >> "${file}"
-echo "   topicroot:"${MQTT_TOPICROOT} >> "${file}"
+echo "   enabled: "${MQTT_ENABLE} >> "${file}"
+echo "   username: "${MQTT_USERNAME} >> "${file}"
+echo "   password: \"${MQTT_PASSWORD}\"" >> "${file}"
+echo "   port: "${MQTT_PORT} >> "${file}"
+echo "   server: \"${MQTT_SERVER}\"" >> "${file}"
+echo "   topicroot: "${MQTT_TOPICROOT} >> "${file}"
 
 
 
@@ -37,8 +37,8 @@ for network in $(bashio::config 'hisilicon|keys'); do
 done
 
 echo "hisilicon:" >> "${file}"
-echo "   enabled:"${HISILICON_ENABLE} >> "${file}"
-echo "   port:"${HISILICON_PORT} >> "${file}"
+echo "   enabled: "${HISILICON_ENABLE} >> "${file}"
+echo "   port: "${HISILICON_PORT} >> "${file}"
 
 
 
