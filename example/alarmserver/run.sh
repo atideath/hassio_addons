@@ -31,9 +31,12 @@ echo "This is a test" > /foo.txt
 echo "debug:"${DEBUG} > "${file}"
 ## append ##
 echo "mqtt:" >> "${file}"
-echo "   enabled:\${MQTT_ENABLE}\;" >> "${file}"
-
-
+echo "   enabled:"${MQTT_ENABLE} >> "${file}"
+echo "   username:"${MQTT_USERNAME} >> "${file}"
+echo "   password:\"${MQTT_PASSWORD}\";" >> "${file}"
+echo "   port:"${MQTT_PORT} >> "${file}"
+echo "   server:\"${MQTT_SERVER}\";" >> "${file}"
+echo "   topicroot:"${MQTT_TOPICROOT} >> "${file}"
 
 
 
