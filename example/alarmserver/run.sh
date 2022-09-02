@@ -9,14 +9,23 @@ DEBUG=$(bashio::config 'debug')
 
 
 
-    echo "option debug \"${DEBUG}\";"
+echo "option debug \"${DEBUG}\";"
 
 
 
+# mqtt
+for network in $(bashio::config 'mqtt|keys'); do
+    MQTT_ENABLE=$(bashio::config "mqtt[${network}].enabled")
+    MQTT_USERNAME=$(bashio::config "mqtt[${network}].username")
+    MQTT_PASSWORD=$(bashio::config "mqtt[${network}].password")
+    MQTT_PORT=$(bashio::config "mqtt[${network}].port")
+    MQTT_SERVER=$(bashio::config "mqtt[${network}].server")
+    MQTT_TOPICROOT=$(bashio::config "mqtt[${network}].topicroot")
+done
 
 
-
-
+echo "option MQTT_ENABLE \"${MQTT_ENABLE}\";"
+echo "option MQTT_USERNAME \"${MQTT_USERNAME}\";"
 
 
 echo "start 8000 web"
