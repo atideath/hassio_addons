@@ -34,7 +34,12 @@ options:
      port: 1883
      server: "mqtt.example.com"
      topicroot: camera-alerts 
-  
+  ftp:
+   - enabled: true
+     port: 21
+     password: "root"
+     allowFiles: true
+     rootPath: "./ftp"   
 schema:
   debug: bool 
   hisilicon:
@@ -47,3 +52,9 @@ schema:
      port: int
      server: str
      topicroot: str   
+  ftp:
+   - enabled: bool
+     port: int
+     password: str
+     allowFiles: bool
+     rootPath: str   
