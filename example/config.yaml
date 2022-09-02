@@ -19,6 +19,7 @@ startup: before
 ports:
   15002/tcp: 15002
   21/tcp: 21
+  8000/tcp: 8000  
 map:
   - config:rw
 options:
