@@ -11,19 +11,19 @@ FROM $BUILD_FROM
 # Copy root filesystem
 #COPY rootfs /
 
-WORKDIR /data
+WORKDIR /config
 
 # Copy data for add-on
-COPY run.sh /
-RUN chmod a+x /run.sh
+#COPY run.sh /
+#RUN chmod a+x /run.sh
 
-CMD [ "/run.sh" ]
+#CMD [ "/run.sh" ]
 
 # Copy data for add-on
 #COPY alarmserver-linux-raspberry /
 #COPY config/config.yaml / config.yaml
 
-COPY * /config/
+COPY /config/* /config/
 
 RUN chmod a+x /config/alarmserver-linux-raspberry
 RUN chmod a+x /config/config.yaml
