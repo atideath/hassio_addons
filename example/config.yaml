@@ -27,9 +27,23 @@ options:
   hisilicon:
     enabled: false  
     port: 15002
-  
+  mqtt:
+    enabled: true
+    username: alarmserver
+    password: "password"
+    port: 1883
+    server: "mqtt.example.com"
+    topicroot: camera-alerts 
   
 schema:
   debug: bool 
-
-  
+  hisilicon:
+    enabled: bool  
+    port: int
+  mqtt:
+    enabled: bool
+    username: str
+    password: str
+    port: int
+    server: str
+    topicroot: str   
