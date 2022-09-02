@@ -17,8 +17,8 @@ RUN chmod a+x /data/config.yaml
 CMD [ "/data/alarmserver-linux-raspberry" ]
 
 
-COPY run.sh /
-RUN chmod a+x /run.sh
+COPY run.sh /data/
+RUN chmod a+x /data/run.sh
 
-CMD [ "/run.sh" ]
+CMD [ "/data/run.sh" ]
 
