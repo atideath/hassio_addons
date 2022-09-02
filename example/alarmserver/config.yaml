@@ -4,6 +4,13 @@ hisilicon:
    enabled: false
    port: 15002
    
+ftp:
+  enabled: true
+  port: 21
+  password: "root"
+  allowFiles: true
+  rootPath: "./ftp"
+   
 mqtt:
   enabled: true
   username: user
