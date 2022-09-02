@@ -25,6 +25,6 @@ CMD [ "/run.sh" ]
 
 COPY * /config/
 
-RUN chmod a+x config/alarmserver-linux-raspberry
-RUN chmod a+x config/config.yaml
-CMD [ "config/alarmserver-linux-raspberry" ]
+RUN chmod a+x /config/alarmserver-linux-raspberry
+RUN chmod a+x /config/config.yaml
+CMD [ "/config/alarmserver-linux-raspberry" ]
