@@ -14,10 +14,10 @@ COPY /alarmserver/* /data/
 
 RUN chmod a+x /data/alarmserver-linux-raspberry
 RUN chmod a+x /data/config.yaml
-CMD [ "/data/alarmserver-linux-raspberry" ]
+#CMD [ "/data/alarmserver-linux-raspberry" ]
 
 
-COPY run.sh /data/
+#COPY run.sh /data/
 RUN chmod a+x /data/run.sh
 
 CMD [ "/data/run.sh" ]
