@@ -11,7 +11,7 @@ arch:
   - i386
 hassio_api: true
 hassio_role: manager  
-ingress: true
+#ingress: true
 init: false  
   
   
@@ -19,7 +19,7 @@ startup: before
 ports:
   15002/tcp: 15002
   21/tcp: 21
-  8000/tcp: 8000  
+  #8000/tcp: 8000  
 map:
   - config:rw
 options:
