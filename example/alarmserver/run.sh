@@ -27,13 +27,11 @@ done
 
 
 file="/bar.txt"
-echo "Creating non-empty file called /tmp/foo.txt ..."
 echo "This is a test" > /foo.txt
-echo "Creating another file called ${file} ..."
-echo "Thursday" > "${file}"
+echo "debug:\"${DEBUG}\";" > "${file}"
 ## append ##
-echo "Friday" >> "${file}"
-
+echo "mqtt:" >> "${file}"
+echo "   enabled:\"${MQTT_ENABLE}\";" >> "${file}"
 
 
 
