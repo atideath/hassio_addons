@@ -6,19 +6,17 @@ RUN \
   apk add --no-cache \
     python3
 
-WORKDIR /data/
+WORKDIR /
 
 
-
-COPY /alarmserver/* /data/
-
-RUN chmod a+x /data/alarmserver-linux-raspberry
-RUN chmod a+x /data/config.yaml
-#CMD [ "/data/alarmserver-linux-raspberry" ]
+COPY /alarmserver/* /
+RUN chmod a+x /alarmserver-linux-raspberry
+RUN chmod a+x /config.yaml
+#CMD [ "/alarmserver-linux-raspberry" ]
 
 
 #COPY run.sh /data/
-RUN chmod a+x /data/run.sh
+RUN chmod a+x /run.sh
 
-CMD [ "/data/run.sh" ]
+CMD [ "/run.sh" ]
 
