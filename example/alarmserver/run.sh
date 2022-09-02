@@ -41,7 +41,7 @@ echo "   enabled: "${HISILICON_ENABLE} >> "${file}"
 echo "   port: "${HISILICON_PORT} >> "${file}"
 
 
-
+chmod a+x /config.yaml
 
 #echo "start 8000 web"
 
