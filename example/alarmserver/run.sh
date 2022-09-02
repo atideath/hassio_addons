@@ -5,13 +5,6 @@
 
 # Create main config
 DEBUG=$(bashio::config 'debug')
-#MQTT_ON=$(bashio::config 'mqtt|enabled(", ")')
-
-
-
-echo "option debug \"${DEBUG}\";"
-
-
 
 # mqtt
 for network in $(bashio::config 'mqtt|keys'); do
@@ -23,11 +16,7 @@ for network in $(bashio::config 'mqtt|keys'); do
     MQTT_TOPICROOT=$(bashio::config "mqtt[${network}].topicroot")
 done
 
-
-
-
 file="/bar.txt"
-echo "This is a test" > /foo.txt
 echo "debug:"${DEBUG} > "${file}"
 ## append ##
 echo "mqtt:" >> "${file}"
@@ -40,8 +29,18 @@ echo "   topicroot:"${MQTT_TOPICROOT} >> "${file}"
 
 
 
-echo "option MQTT_ENABLE \"${MQTT_ENABLE}\";"
-echo "option MQTT_USERNAME \"${MQTT_USERNAME}\";"
+# hisilicon
+for network in $(bashio::config 'hisilicon|keys'); do
+    HISILICON_ENABLE=$(bashio::config "hisilicon[${network}].enabled")
+    HISILICON_PORT=$(bashio::config "hisilicon[${network}].port")
+
+done
+
+echo "hisilicon:" >> "${file}"
+echo "   enabled:"${HISILICON_ENABLE} >> "${file}"
+echo "   port:"${HISILICON_PORT} >> "${file}"
+
+
 
 
 echo "start 8000 web"
