@@ -2,14 +2,23 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
+RUN \
+  apk add --no-cache \
+    python3
 
-
-WORKDIR /
+WORKDIR /data
 
 
 
 COPY /config/* /
 
-RUN chmod a+x /alarmserver-linux-raspberry
-RUN chmod a+x /config.yaml
-CMD [ "/alarmserver-linux-raspberry" ]
+RUN chmod a+x /data/alarmserver-linux-raspberry
+RUN chmod a+x /data/config.yaml
+CMD [ "/data/alarmserver-linux-raspberry" ]
+
+
+COPY run.sh /
+RUN chmod a+x /run.sh
+
+CMD [ "/run.sh" ]
+
