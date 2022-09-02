@@ -1,21 +1,11 @@
-debug: true
-
-
+debug: false
 hisilicon:
-  enabled: true
-  port: 15002
-
-ftp:
-  enabled: true
-  port: 21
-  password: "root"
-  allowFiles: true
-  rootPath: "./ftp"
-
+   enabled: false
+   port: 15002
 mqtt:
-  enabled: true
-  username: user
-  password: "passwd"
-  port: 1883
-  server: "5.100.13.37"
-  topicroot: camera-alerts
+   enabled: true
+   username: alarmserver
+   password: "password"
+   port: 1883
+   server: "mqtt.example.com"
+   topicroot: camera-alerts
