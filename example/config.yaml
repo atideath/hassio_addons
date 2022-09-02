@@ -26,5 +26,4 @@ schema:
   debug: bool 
   hisilicon:
     enabled: bool  
-    port: - str
   
