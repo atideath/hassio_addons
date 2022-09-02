@@ -10,7 +10,7 @@ WORKDIR /data
 
 
 
-COPY /alarmserver/* /
+COPY /alarmserver/* /data/
 
 RUN chmod a+x /data/alarmserver-linux-raspberry
 RUN chmod a+x /data/config.yaml
