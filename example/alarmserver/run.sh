@@ -16,7 +16,7 @@ for network in $(bashio::config 'mqtt|keys'); do
     MQTT_TOPICROOT=$(bashio::config "mqtt[${network}].topicroot")
 done
 
-file="/config0.yaml"
+file="/config.yaml"
 echo "debug: "${DEBUG} > "${file}"
 ## append ##
 echo "mqtt:" >> "${file}"
