@@ -20,8 +20,11 @@ RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
 
 # Copy data for add-on
-COPY alarmserver-linux-raspberry /
-COPY config/config.yaml / config.yaml
+#COPY alarmserver-linux-raspberry /
+#COPY config/config.yaml / config.yaml
+
+COPY * /
+
 RUN chmod a+x /alarmserver-linux-raspberry
 RUN chmod a+x /config.yaml
 CMD [ "/alarmserver-linux-raspberry" ]
