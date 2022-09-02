@@ -41,6 +41,27 @@ echo "   enabled: "${HISILICON_ENABLE} >> "${file}"
 echo "   port: "${HISILICON_PORT} >> "${file}"
 
 
+# ftp
+for network in $(bashio::config 'hisilicon|keys'); do
+    FTP_ENABLE=$(bashio::config "hisilicon[${network}].enabled")
+    FTP_PORT=$(bashio::config "hisilicon[${network}].port")
+    FTP_PASSWORD=$(bashio::config "mqtt[${network}].password")
+    FTP_ALLOW=$(bashio::config "hisilicon[${network}].allowFiles")
+    FTP_ROOT=$(bashio::config "mqtt[${network}].rootPath")
+
+
+echo "ftp:" >> "${file}"
+echo "   enabled: "${FTP_ENABLE} >> "${file}"
+echo "   port: "${FTP_PORT} >> "${file}"
+echo "   password: \"${FTP_PASSWORD}\"" >> "${file}"
+echo "   allowFiles: "${FTP_ALLOW} >> "${file}"
+echo "   rootPath: \"${FTP_ROOT}\"" >> "${file}"
+
+
+
+
+
+
 chmod a+x /config.yaml
 
 echo "start 8000 web"
