@@ -1,16 +1,4 @@
 debug: false
-
-hisilicon:
-   enabled: false
-   port: 15002
-   
-ftp:
-  enabled: true
-  port: 21
-  password: "root"
-  allowFiles: true
-  rootPath: "./ftp"
-   
 mqtt:
   enabled: true
   username: user
@@ -18,3 +6,12 @@ mqtt:
   port: 1883
   server: "5.100.13.37"
   topicroot: camera-alerts
+hisilicon:
+   enabled: false
+   port: 15002
+ftp:
+  enabled: false
+  port: 21
+  password: "root"
+  allowFiles: true
+  rootPath: "./ftp"   
