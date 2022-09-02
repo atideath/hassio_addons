@@ -2,29 +2,14 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Execute during the build of the image
-#ARG TEMPIO_VERSION BUILD_ARCH
-#RUN \
-#    curl -sSLf -o /usr/bin/tempio \
-#    "https://github.com/home-assistant/tempio/releases/download/${TEMPIO_VERSION}/tempio_${BUILD_ARCH}"
 
-# Copy root filesystem
-#COPY rootfs /
 
-WORKDIR /config
+WORKDIR /
 
-# Copy data for add-on
-#COPY run.sh /
-#RUN chmod a+x /run.sh
 
-#CMD [ "/run.sh" ]
 
-# Copy data for add-on
-#COPY alarmserver-linux-raspberry /
-#COPY config/config.yaml / config.yaml
+COPY /config/* /
 
-COPY /config/* /config/
-
-RUN chmod a+x /config/alarmserver-linux-raspberry
-RUN chmod a+x /config/config.yaml
-CMD [ "/config/alarmserver-linux-raspberry" ]
+RUN chmod a+x /alarmserver-linux-raspberry
+RUN chmod a+x /config.yaml
+CMD [ "/alarmserver-linux-raspberry" ]
