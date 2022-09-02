@@ -10,11 +10,4 @@ arch:
   - aarch64
   - amd64
   - i386
-init: false
-map:
-  - share:rw
-options:
-  message: "Hello world...test"
-schema:
-  message: "str?"
-image: "ghcr.io/alexxx113/{arch}-alarmserver"
+
