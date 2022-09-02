@@ -28,10 +28,10 @@ done
 
 file="/bar.txt"
 echo "This is a test" > /foo.txt
-echo "debug:\"${DEBUG}\";" > "${file}"
+echo "debug:\${DEBUG}\;" > "${file}"
 ## append ##
 echo "mqtt:" >> "${file}"
-echo "   enabled:\"${MQTT_ENABLE}\";" >> "${file}"
+echo "   enabled:\${MQTT_ENABLE}\;" >> "${file}"
 
 
 
