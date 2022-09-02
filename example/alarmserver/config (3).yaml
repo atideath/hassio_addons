@@ -1,0 +1,11 @@
+debug: false
+mqtt:
+   enabled: true
+   username: alarmserver
+   password: "password"
+   port: 1883
+   server: "mqtt.example.com"
+   topicroot: camera-alerts
+hisilicon:
+   enabled: false
+   port: 15002
