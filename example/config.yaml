@@ -9,3 +9,7 @@ arch:
   - armhf
   - armv7
   - i386
+startup: before
+ports:
+  15002/tcp: 15002
+  21/tcp: 21
