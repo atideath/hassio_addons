@@ -8,10 +8,9 @@ DEBUG=$(bashio::config 'debug')
 #MQTT_ON=$(bashio::config 'mqtt|enabled(", ")')
 
 
-{
+
     echo "option debug \"${DEBUG}\";"
-    echo "authoritative;"
-} > "${CONFIG}"
+
 
 
 
