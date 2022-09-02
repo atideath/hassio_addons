@@ -42,12 +42,12 @@ echo "   port: "${HISILICON_PORT} >> "${file}"
 
 
 # ftp
-for network in $(bashio::config 'hisilicon|keys'); do
-    FTP_ENABLE=$(bashio::config "hisilicon[${network}].enabled")
-    FTP_PORT=$(bashio::config "hisilicon[${network}].port")
-    FTP_PASSWORD=$(bashio::config "mqtt[${network}].password")
-    FTP_ALLOW=$(bashio::config "hisilicon[${network}].allowFiles")
-    FTP_ROOT=$(bashio::config "mqtt[${network}].rootPath")
+for network in $(bashio::config 'ftp|keys'); do
+    FTP_ENABLE=$(bashio::config "ftp[${network}].enabled")
+    FTP_PORT=$(bashio::config "ftp[${network}].port")
+    FTP_PASSWORD=$(bashio::config "ftp[${network}].password")
+    FTP_ALLOW=$(bashio::config "ftp[${network}].allowFiles")
+    FTP_ROOT=$(bashio::config "ftp[${network}].rootPath")
 
 done
 
