@@ -49,6 +49,7 @@ for network in $(bashio::config 'hisilicon|keys'); do
     FTP_ALLOW=$(bashio::config "hisilicon[${network}].allowFiles")
     FTP_ROOT=$(bashio::config "mqtt[${network}].rootPath")
 
+done
 
 echo "ftp:" >> "${file}"
 echo "   enabled: "${FTP_ENABLE} >> "${file}"
