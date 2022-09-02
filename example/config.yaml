@@ -13,3 +13,18 @@ startup: before
 ports:
   15002/tcp: 15002
   21/tcp: 21
+map:
+  - config:rw
+options:
+  debug: false  
+  hisilicon:
+    enabled: false  
+    port: 15002
+  
+  
+schema:
+  debug: bool 
+  hisilicon:
+    enabled: bool  
+    port: - str
+  
