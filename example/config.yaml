@@ -46,7 +46,7 @@ schema:
    - enabled: bool  
      port: int
   mqtt:
-   - enabled: bool
+   - enabled: bool 
      username: str
      password: str
      port: int
