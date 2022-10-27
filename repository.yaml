@@ -1,4 +1,0 @@
-# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
-name: Atideath Home Assistant add-on repository
-url: 'https://github.com/atideath/hassio_addons'
-maintainer: Atideath <awesome@example.com>
