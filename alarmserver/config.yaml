@@ -1,7 +1,7 @@
 name: "AlarmServer"
 description: "My first real add-on!"
 version: "1.0.1"
-slug: "alarmserver"
+slug: "example"
 advanced: true
 arch:
   - aarch64
